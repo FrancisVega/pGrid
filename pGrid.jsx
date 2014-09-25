@@ -1,4 +1,5 @@
 // pGrid
+// Handcrafted Grids in Photoshop
 // Part of Mêlée Workflow Tools
 //
 // twitter: @francis_vega
