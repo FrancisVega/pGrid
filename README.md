@@ -1,4 +1,4 @@
 pGrid
 =====
 
-Artesanal Grids in Photoshop
+Handcrafted Grids in Photoshop
