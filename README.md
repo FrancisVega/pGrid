@@ -26,3 +26,8 @@ pGrid will send automatically the **grid** group into the top of hierarchy to ov
 To do
 -----
 Create a second script just to send up the grid group and attach it with a several events with the Script Event Manager.
+
+
+Video
+-----
+https://www.youtube.com/watch?v=uCPTB0rQVT4
