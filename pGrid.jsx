@@ -1,5 +1,4 @@
 // pGrid
-// Handcrafted Grids in Photoshop
 // Part of Mêlée Workflow Tools
 //
 // twitter: @francis_vega
@@ -57,7 +56,7 @@ app.bringToFront();
     }
 
     photoshop.prototype.sendGridLayerToTop = function() {
-        psd.sendLayerToTop(psd.gridGroup)
+        psd.sendLayerToTop(this.gridGroup)
     }
 
     // Main
@@ -69,10 +68,8 @@ app.bringToFront();
             psd.sendGridLayerToTop();
             psd.switchVisible();
         } else {
-            alert("No existe el Grupo con el nombre: " + GRIDNAME)
+            alert("Creaet a group called '" + GRIDNAME + "'")
         }
-    } else {
-        alert("No hay docs abiertos")
     }
 
 })();
