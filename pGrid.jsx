@@ -10,20 +10,12 @@
 // Hey, wake up!
 app.bringToFront();
 
-
 (function(){
 
     var GRIDNAME = 'grid';
 
     var photoshop = function() {
         this.app = app;
-    }
-
-    // Get doc and layers
-    photoshop.prototype.getLayers = function() {
-        this.doc = app.activeDocument;
-        this.firstLayer = this.doc.layers[0];
-        this.gridGroup = this.doc.layerSets.getByName(GRIDNAME);
     }
 
     // Check if there any doc has opened
@@ -45,10 +37,16 @@ app.bringToFront();
         }
     }
 
+    // Get doc and layers
+    photoshop.prototype.getLayers = function() {
+        this.doc = app.activeDocument;
+        this.firstLayer = this.doc.layers[0];
+        this.gridGroup = this.doc.layerSets.getByName(GRIDNAME);
+    }
+
     // Send a layer or group to the top of hierarchy
-    photoshop.prototype.sendLayerToTop = function(layer) {
-        // Move 'layer' before the first layer in doc
-        layer.move(this.firstLayer, ElementPlacement.PLACEBEFORE);
+    photoshop.prototype.sendGridLayerToTop = function() {
+        this.gridGroup.move(this.firstLayer, ElementPlacement.PLACEBEFORE);
     }
 
     // Switch on/off visible
@@ -58,11 +56,6 @@ app.bringToFront();
         } else {
             this.gridGroup.visible = true;
         }
-    }
-
-    // Send 'grid' layer to the top of hierarchy
-    photoshop.prototype.sendGridLayerToTop = function() {
-        psd.sendLayerToTop(this.gridGroup)
     }
 
     // Main
